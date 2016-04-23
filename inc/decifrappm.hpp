@@ -2,9 +2,12 @@
 #define DECIFRAPPM_HPP
 
 #include <iostream>
+#include <string>
+
+using namespace std;
 
 
-class decifraPpm{
+class DecifraPpm{
   //atributos
 private:
   int row, col, col_p;
@@ -14,15 +17,18 @@ private:
 
 //métodos
 public:
-  decifraPpm();
-  ~decifraPpm();
+  DecifraPpm();
+  ~DecifraPpm();
+  void extractInformation();
   void setWidth(int width);
+  int getWidth();
   void setHeight(int height);
+  int getHeight();
   void toLineCorrect();//pula para a linha onde está a imagem
   void loadImage();
   void readPixels();
   void applyFilter(int filtroSelecionado);
   void saveNewImage();
 
-
-}
+};
+#endif
