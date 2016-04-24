@@ -12,10 +12,11 @@ int main(){
   double selecionaFormatoDaImagem;
   cout << "Digite 1 para desencriptar imagens .PPM" << endl;
   cout << "Digite 2 para desencriptar imagens .PGM" << endl;
+  cout << "Digite 0 para sair" << endl;
   cin >> selecionaFormatoDaImagem;
 
   if(selecionaFormatoDaImagem == 1){
-
+  //parte onde irá se dar a desencriptação das imagens PPM
   DecifraPpm * decifraPPM;
   decifraPPM = new DecifraPpm();
   cout << "Digite o nome da imagem: " << endl;
@@ -24,7 +25,13 @@ int main(){
   decifraPPM->decode();
   }
   else if (selecionaFormatoDaImagem == 2){
-    cout << "falta implementar" << endl;
+  //parte onde irá se dar a desencriptação das imagens PGM
+  
+
+  }
+  else if (selecionaFormatoDaImagem == 0) {
+    //cout << "Até mais!" << endl;
+    exit(0);
   }
   else if (selecionaFormatoDaImagem != 1 && selecionaFormatoDaImagem != 2){
     cout << "Opção inválida! Tente novamente e selecione 1 ou 2." << endl;
