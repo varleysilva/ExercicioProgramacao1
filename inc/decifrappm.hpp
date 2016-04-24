@@ -3,32 +3,15 @@
 
 #include <iostream>
 #include <string>
+#include "decifra.hpp"
 
 using namespace std;
 
 
-class DecifraPpm{
-  //atributos
-private:
-  int row, col, col_p;
-  int width;
-  int height;
-  char pixel;
-
+class DecifraPpm : public Decifra{
 //métodos
 public:
-  DecifraPpm();
-  ~DecifraPpm();
-  void extractInformation();
-  // void setWidth(int width);
-  // int getWidth();
-  // void setHeight(int height);
-  // int getHeight();
-  // void toLineCorrect();//pula para a linha onde está a imagem
-  void loadImage();
-  void readPixels();
-  void applyFilter(int filtroSelecionado);
-  void saveNewImage();
-
+DecifraPpm();
+void decode(int filter);
 };
 #endif

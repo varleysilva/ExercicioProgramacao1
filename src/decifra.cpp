@@ -1,13 +1,13 @@
 #include <iostream>
 #include <string>
-#include <fsstream>
+#include <fstream>
 #include <cstdlib>
 #include <cstdlib>
 #include "decifra.hpp"
 
 using namespace std;
 
-Decifra::Decifra(){}
+//Decifra::Decifra(){}
 
 void Decifra::openImage(string nomeDaImagem){
   fstream file;
@@ -19,16 +19,20 @@ void Decifra::openImage(string nomeDaImagem){
       cerr << "Não foi possivel abrir arquivo" << endl;
   }
 
+  getline(file, inputLine);
+  cout << "Número mágico: "<< inputLine << endl;
   getline(file,inputLine);
-  cout << "Número mágico: "inputLine << endl;
-  getline(file,inputLine);
-  cout << "Comentário: "inputLine << endl;
-  getline(file,inputLine);
+  cout << "Comentário: "<< inputLine << endl;
+  getline(file, inputLine);
   ss << inputLine;
   ss >> width >> height; //pega a altura e a largura
-  getline(file,inputLine);
-  cout <<"Cor máxima: " inputLine << endl;
+  getline(file, inputLine);
+  cout <<"Cor máxima: " << inputLine << endl;
 }
 void Decifra::decode(){
+  getline(file,inputLine);
+  getline(file,inputLine);
+  getline(file,inputLine);
+  getline(file,inputLine);
   //será implementado nas classes filhas
 }
