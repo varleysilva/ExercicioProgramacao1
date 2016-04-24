@@ -10,9 +10,6 @@ using namespace std;
 //Decifra::Decifra(){}
 
 void Decifra::openImage(string nomeDaImagem){
-  fstream file;
-  string inputLine = "";
-
   file.open(nomeDaImagem, fstream::in | fstream::binary);
 
   if(!file.is_open()){
@@ -20,14 +17,14 @@ void Decifra::openImage(string nomeDaImagem){
   }
 
   getline(file, inputLine);
-  cout << "Número mágico: "<< inputLine << endl;
+  cout << inputLine << endl;
   getline(file,inputLine);
-  cout << "Comentário: "<< inputLine << endl;
+  cout << inputLine << endl;
   getline(file, inputLine);
   ss << inputLine;
   ss >> width >> height; //pega a altura e a largura
   getline(file, inputLine);
-  cout <<"Cor máxima: " << inputLine << endl;
+  cout << inputLine << endl;
 }
 void Decifra::decode(){
   getline(file,inputLine);

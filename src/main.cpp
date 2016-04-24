@@ -15,6 +15,7 @@ int main(){
   cout << "Digite o nome da imagem: " << endl;
   cin >> nomeDaImagem;
   decifraPPM->openImage(nomeDaImagem);
+
   decifraPPM->decode();
 
 }

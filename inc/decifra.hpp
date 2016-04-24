@@ -11,7 +11,7 @@ using namespace std;
 
 class Decifra{
  protected:
-   int row=0, col=0, height, width, col_pixel, start;
+   int row = 0, col = 0, height, width, bits, col_pixel, start;
    string inputLine = "";
    stringstream ss;
    fstream file;

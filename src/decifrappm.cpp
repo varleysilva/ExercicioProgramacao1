@@ -2,6 +2,8 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <cstdlib>
+
 #include "decifrappm.hpp"
 
 using namespace std;
@@ -9,16 +11,20 @@ using namespace std;
 DecifraPpm::DecifraPpm(){}
 
 void DecifraPpm::decode(){
-  stringstream ss;
-  string inputLine = "";
+  //stringstream ss;
+  //string inputLine = "";
   //fstream file;
-
   //file.open(nomeDaImagem, fstream::in | fstream::binary);
 
-  getline(file,inputLine);
-  getline(file,inputLine);
-  getline(file,inputLine);
-  getline(file,inputLine);
+  // getline(file,inputLine);
+  // cout << inputLine << endl;
+  // getline(file,inputLine);
+  // cout << inputLine << endl;
+  // getline(file,inputLine);
+  // ss << inputLine;
+  // ss >> width >> height;
+  // getline(file,inputLine);
+  // cout << inputLine << endl;
 
   char pixel;
   unsigned char pixel_value[height][width][3];
@@ -63,4 +69,5 @@ void DecifraPpm::decode(){
   }
   cout << "Imagem decifrada com sucesso!" << endl;
   outFile.close();
+
 }
