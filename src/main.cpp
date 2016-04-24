@@ -27,12 +27,14 @@ int main(){
   decifraPPM->decode();
   }  //parte onde irá se dar a desencriptação das imagens PGM
   else if (selecionaFormatoDaImagem == 2){
+
   DecifraPgm * decifraPGM;
   decifraPGM = new DecifraPgm();
   cout << "Digite o nome da imagem: " << endl;
   cin >> nomeDaImagem;
   decifraPGM->openImage(nomeDaImagem);
   decifraPGM->decode();
+
   }
   else if (selecionaFormatoDaImagem == 0) {
     //cout << "Até mais!" << endl;

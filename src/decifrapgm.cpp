@@ -15,7 +15,8 @@ void DecifraPgm::openImage(string nomeDaImagem){
   file.open(file_name.c_str(), fstream::in | fstream::binary);
 
   if(!file.is_open()){
-      cerr << "Não foi possivel abrir arquivo" << endl;
+      cerr << "Não foi possivel abrir arquivo." << endl;
+      exit(0);
   }
 
   getline(file, inputLine);
@@ -66,6 +67,7 @@ void DecifraPgm::decode(){
       }
       bits++;
   }
+  cout << "Imagem decifrada com sucesso!" << endl;
   outfile.close();
   cout << endl;
 }

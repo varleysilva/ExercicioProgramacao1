@@ -13,7 +13,8 @@ void Decifra::openImage(string nomeDaImagem){
   file.open(nomeDaImagem, fstream::in | fstream::binary);
 
   if(!file.is_open()){
-      cerr << "Não foi possivel abrir arquivo" << endl;
+      cerr << "Não foi possivel abrir arquivo." << endl;
+      exit(0);
   }
 
   getline(file, inputLine);
