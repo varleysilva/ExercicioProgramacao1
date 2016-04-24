@@ -12,6 +12,6 @@ class DecifraPpm : public Decifra{
 //métodos
 public:
 DecifraPpm();
-void decode(int filter);
+void decode();
 };
 #endif

@@ -8,10 +8,12 @@ using namespace std;
 
 DecifraPpm::DecifraPpm(){}
 
-void DecifraPpm::decode(int filter){
+void DecifraPpm::decode(){
   stringstream ss;
   string inputLine = "";
-  fstream file;
+  //fstream file;
+
+  //file.open(nomeDaImagem, fstream::in | fstream::binary);
 
   getline(file,inputLine);
   getline(file,inputLine);
