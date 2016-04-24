@@ -10,6 +10,7 @@ DecifraPpm::DecifraPpm(){}
 
 DecifraPpm::~DecifraPpm(){}
 
+
 void DecifraPpm::extractInformation(){
   string inputLine = "";
   fstream file;

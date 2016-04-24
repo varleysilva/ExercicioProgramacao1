@@ -20,11 +20,11 @@ public:
   DecifraPpm();
   ~DecifraPpm();
   void extractInformation();
-  void setWidth(int width);
-  int getWidth();
-  void setHeight(int height);
-  int getHeight();
-  void toLineCorrect();//pula para a linha onde está a imagem
+  // void setWidth(int width);
+  // int getWidth();
+  // void setHeight(int height);
+  // int getHeight();
+  // void toLineCorrect();//pula para a linha onde está a imagem
   void loadImage();
   void readPixels();
   void applyFilter(int filtroSelecionado);
