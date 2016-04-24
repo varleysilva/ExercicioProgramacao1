@@ -7,11 +7,13 @@
 
 using namespace std;
 
-class DecifraPgm : Public Decifra{
+class DecifraPgm : public Decifra{
   //métodos
 public:
   DecifraPgm();
   void decode();
+  void openImage(string nomeDaImagem);
 
 
-}
+};
+#endif

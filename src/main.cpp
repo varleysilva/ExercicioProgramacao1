@@ -4,6 +4,7 @@
 #include <sstream>
 #include <cstdlib>
 #include "decifrappm.hpp"
+#include "decifrapgm.hpp"
 
 using namespace std;
 
@@ -15,19 +16,23 @@ int main(){
   cout << "Digite 0 para sair" << endl;
   cin >> selecionaFormatoDaImagem;
 
-  if(selecionaFormatoDaImagem == 1){
   //parte onde irá se dar a desencriptação das imagens PPM
+  if(selecionaFormatoDaImagem == 1){
+
   DecifraPpm * decifraPPM;
   decifraPPM = new DecifraPpm();
   cout << "Digite o nome da imagem: " << endl;
   cin >> nomeDaImagem;
   decifraPPM->openImage(nomeDaImagem);
   decifraPPM->decode();
-  }
+  }  //parte onde irá se dar a desencriptação das imagens PGM
   else if (selecionaFormatoDaImagem == 2){
-  //parte onde irá se dar a desencriptação das imagens PGM
-  
-
+  DecifraPgm * decifraPGM;
+  decifraPGM = new DecifraPgm();
+  cout << "Digite o nome da imagem: " << endl;
+  cin >> nomeDaImagem;
+  decifraPGM->openImage(nomeDaImagem);
+  decifraPGM->decode();
   }
   else if (selecionaFormatoDaImagem == 0) {
     //cout << "Até mais!" << endl;

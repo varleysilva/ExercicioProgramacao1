@@ -15,7 +15,7 @@ class Decifra{
    string inputLine = "";
    stringstream ss;
    fstream file;
-   string nomeDaImagem;
+   string nomeDaImagem, file_name;
 
  public:
    void openImage(string nomeDaImagem);

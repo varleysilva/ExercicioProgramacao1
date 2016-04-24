@@ -11,21 +11,6 @@ using namespace std;
 DecifraPpm::DecifraPpm(){}
 
 void DecifraPpm::decode(){
-  //stringstream ss;
-  //string inputLine = "";
-  //fstream file;
-  //file.open(nomeDaImagem, fstream::in | fstream::binary);
-
-  // getline(file,inputLine);
-  // cout << inputLine << endl;
-  // getline(file,inputLine);
-  // cout << inputLine << endl;
-  // getline(file,inputLine);
-  // ss << inputLine;
-  // ss >> width >> height;
-  // getline(file,inputLine);
-  // cout << inputLine << endl;
-
   char pixel;
   unsigned char pixel_value[height][width][3];
 
