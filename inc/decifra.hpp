@@ -16,8 +16,6 @@ class Decifra{
    stringstream ss;
    fstream file, outFile;
    string nomeDaImagem, file_name, outName;
-   //fstream outFile;
-  //  string outName;
    unsigned char pixel_value;
 
  public:

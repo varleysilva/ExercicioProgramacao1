@@ -37,5 +37,4 @@ void Decifra::decode(){
 void Decifra::closeImage(){
   cout << "Imagem decifrada com sucesso!" << endl;
   outFile.close();
-
 }
