@@ -13,6 +13,7 @@ public:
   DecifraPgm();
   void decode();
   void openImage(string nomeDaImagem);
+  void closeImage();
 
 
 };

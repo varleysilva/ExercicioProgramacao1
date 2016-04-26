@@ -34,3 +34,8 @@ void Decifra::decode(){
   getline(file,inputLine);
   //será implementado nas classes filhas
 }
+void Decifra::closeImage(){
+  cout << "Imagem decifrada com sucesso!" << endl;
+  outFile.close();
+
+}

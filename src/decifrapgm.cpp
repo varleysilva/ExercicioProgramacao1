@@ -32,18 +32,20 @@ void DecifraPgm::openImage(string nomeDaImagem){
   cout << "Height: " << height << endl;
   getline(file, inputLine);
   cout << "Cores máximas: " << inputLine << endl;
+
+
 }
 
 void DecifraPgm::decode(){
-  file.seekg(start+file.tellg(), file.beg);
 
+  file.seekg(start+file.tellg(), file.beg);
   cout << file.tellg() << endl;
 
-  fstream outfile;
+  fstream outFile;
   string outName;
-  cout << "Insira aqui o nome do .txt de saída: " << endl;
+  cout << "Insira aqui o nome do .txt de saída (digite com a extensão *.txt): " << endl;
   cin >> outName;
-  outfile.open(outName, fstream::out);
+  outFile.open(outName, fstream::out);
 
   char byte;
   char caractere = 0;
@@ -53,13 +55,10 @@ void DecifraPgm::decode(){
       caractere <<= 1;
       caractere |= (byte & 0x01);
       if(bits == 8){
-          //cout << caractere;
-          outfile << caractere;
+          outFile << caractere;
           bits = 0;
           caractere = 0;
-          // if(!(caractere ^ '#')){
-          //     break;
-          // }
+
           if(caractere == (char)'#'){
               printf("HELO\n");
               break;
@@ -67,7 +66,10 @@ void DecifraPgm::decode(){
       }
       bits++;
   }
+}
+
+void DecifraPgm::closeImage(){
   cout << "Imagem decifrada com sucesso!" << endl;
-  outfile.close();
+  outFile.close();
   cout << endl;
 }

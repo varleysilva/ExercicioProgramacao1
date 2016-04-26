@@ -69,11 +69,12 @@ void DecifraPpm::decode(){
   exit(1);
 }
 
-  fstream outFile;
-  string nomeDeSaida;
-  cout << "Insira aqui o nome da imagem de saída: " << endl;
-  cin >> nomeDeSaida;
-  outFile.open(nomeDeSaida.c_str(), fstream::out | fstream::binary);
+  // fstream outFile;
+  // string outName;
+
+  cout << "Insira aqui o nome da imagem de saída (com extensão *.ppm): " << endl;
+  cin >> outName;
+  outFile.open(outName.c_str(), fstream::out | fstream::binary);
   outFile << "P6" << endl;
   outFile << "#OláMundo" << endl;
   outFile << width << " " << height << endl;
@@ -83,10 +84,7 @@ void DecifraPpm::decode(){
       for(col = 0; col < width; col++){ //leitura das colunas
           for(col_pixel = 0; col_pixel < 3; col_pixel++){ //coluna dos pixels
             outFile << pixel_value[row][col][col_pixel];
-        }
       }
+    }
   }
-  cout << "Imagem decifrada com sucesso!" << endl;
-  outFile.close();
-
 }

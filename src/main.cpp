@@ -10,6 +10,7 @@ using namespace std;
 
 int main(){
   string nomeDaImagem;
+  string outName;
   double selecionaFormatoDaImagem;
   cout << "Digite 1 para desencriptar imagens .PPM" << endl;
   cout << "Digite 2 para desencriptar imagens .PGM" << endl;
@@ -21,19 +22,22 @@ int main(){
 
   DecifraPpm * decifraPPM;
   decifraPPM = new DecifraPpm();
-  cout << "Digite o nome da imagem: " << endl;
+  cout << "Digite o nome da imagem que deseja desencriptar (digite com a extensão *.ppm): " << endl;
   cin >> nomeDaImagem;
   decifraPPM->openImage(nomeDaImagem);
   decifraPPM->decode();
+  decifraPPM->closeImage();
   }  //parte onde irá se dar a desencriptação das imagens PGM
   else if (selecionaFormatoDaImagem == 2){
 
   DecifraPgm * decifraPGM;
   decifraPGM = new DecifraPgm();
-  cout << "Digite o nome da imagem: " << endl;
+  cout << "Digite o nome da imagem que deseja desencriptar (digite com a extensão *.pgm): " << endl;
   cin >> nomeDaImagem;
   decifraPGM->openImage(nomeDaImagem);
   decifraPGM->decode();
+  decifraPGM->closeImage();
+
 
   }
   else if (selecionaFormatoDaImagem == 0) {
