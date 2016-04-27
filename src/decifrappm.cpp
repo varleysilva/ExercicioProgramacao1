@@ -24,7 +24,7 @@ void DecifraPpm::decode(){
       }
   }
   file.close();
-
+  //menu de seleção do filtro
   double selecionaFiltro;
   cout << "Selecione o filtro que quer aplicar:" << endl;
   cout << "1 - Filtro VERMELHO" << endl;
@@ -69,8 +69,8 @@ void DecifraPpm::decode(){
   exit(1);
 }
 
-  // fstream outFile;
-  // string outName;
+  //aqui da inicio a imagem que será desencriptada
+  //adicionando seu nome e os parametros internos como comentários e tamanho e altura
 
   cout << "Insira aqui o nome da imagem de saída (com extensão *.ppm): " << endl;
   cin >> outName;
